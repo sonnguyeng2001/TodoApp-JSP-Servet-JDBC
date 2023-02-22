@@ -1,0 +1,44 @@
+22-Feb-2023 15:28:18.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.33
+22-Feb-2023 15:28:18.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 11 2020 09:31:38 UTC
+22-Feb-2023 15:28:18.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.33.0
+22-Feb-2023 15:28:18.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+22-Feb-2023 15:28:18.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Feb-2023 15:28:18.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Feb-2023 15:28:18.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_281\jre
+22-Feb-2023 15:28:18.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_281-b09
+22-Feb-2023 15:28:18.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Feb-2023 15:28:18.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\Java\apache-tomcat-9.0.33
+22-Feb-2023 15:28:18.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         G:\Java\apache-tomcat-9.0.33
+22-Feb-2023 15:28:18.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\Java\apache-tomcat-9.0.33\conf\logging.properties
+22-Feb-2023 15:28:18.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Feb-2023 15:28:18.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Desktop-Aspire
+22-Feb-2023 15:28:18.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+22-Feb-2023 15:28:18.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Feb-2023 15:28:18.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+22-Feb-2023 15:28:18.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\Java\apache-tomcat-9.0.33
+22-Feb-2023 15:28:18.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=G:\Java\apache-tomcat-9.0.33
+22-Feb-2023 15:28:18.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\Java\apache-tomcat-9.0.33\temp
+22-Feb-2023 15:28:18.043 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+22-Feb-2023 15:28:18.043 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+22-Feb-2023 15:28:18.044 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+22-Feb-2023 15:28:18.072 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+22-Feb-2023 15:28:19.354 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8082"]
+22-Feb-2023 15:28:19.953 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [2,470] milliseconds
+22-Feb-2023 15:28:20.073 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Feb-2023 15:28:20.074 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.33]
+22-Feb-2023 15:28:20.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\docs]
+22-Feb-2023 15:28:20.879 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\docs] has finished in [773] ms
+22-Feb-2023 15:28:20.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\examples]
+22-Feb-2023 15:28:22.186 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\examples] has finished in [1,305] ms
+22-Feb-2023 15:28:22.187 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\host-manager]
+22-Feb-2023 15:28:22.316 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\host-manager] has finished in [129] ms
+22-Feb-2023 15:28:22.317 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\manager]
+22-Feb-2023 15:28:22.406 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\manager] has finished in [88] ms
+22-Feb-2023 15:28:22.406 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\ROOT]
+22-Feb-2023 15:28:22.475 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\ROOT] has finished in [68] ms
+22-Feb-2023 15:28:22.494 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8082"]
+22-Feb-2023 15:28:22.530 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2,576] milliseconds
+22-Feb-2023 15:28:33.477 INFO [http-nio-8082-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml]
+22-Feb-2023 15:28:33.481 WARNING [http-nio-8082-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/TodoApp1] in deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml] has been ignored
+22-Feb-2023 15:28:33.595 INFO [http-nio-8082-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml] has finished in [118] ms
+22-Feb-2023 15:28:33.614 INFO [http-nio-8082-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/TodoApp1]] after start() had already been called. The second call will be ignored.

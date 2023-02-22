@@ -1,0 +1,283 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 21, 2023, 9:35:37 PM
+    Author     : FPTshop
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 166, 0, 0.714);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+.wrapper {
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    width: 900px;
+    min-height: 700px;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.searchTodo_filterTodo {
+    display: flex;
+    margin: 50px 0px 30px 0px;
+}
+.searchTodo {
+    flex: 3;
+    width: 100%;
+}
+input.search_todo {
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.btn {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+}
+.btn:active {
+    opacity: 0.7;
+}
+.btn_info {
+    background-color: #007fff;
+    color: white;
+    cursor: pointer;
+}
+.filterTodo {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+.filterTodo div {
+    position: relative;
+    display: inline-block;
+}
+select.statusTodo {
+    margin: 0px 16px 0px 20px;
+    width: 180px;
+    outline: none;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.arrow-to-bottom {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.Todos {
+}
+.list_todo {
+    list-style-type: none;
+    max-height: 420px;
+    overflow-y: auto;
+}
+.item_todo {
+    height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.item_todo p {
+    font-size: 16px;
+    background-color: white;
+    padding: 0px 0px 0px 18px;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.item_todo p:hover {
+    background-color: #007fff;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.icon-wrapper {
+    padding: 0px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 4px;
+}
+
+.icon-wrapper:active {
+    opacity: 0.7;
+}
+.icon-wrapper.icon-check {
+    background-color: green;
+    margin-right: 4px;
+}
+
+.icon-wrapper.icon-trash {
+    background-color: red;
+}
+
+.addTodo_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.addTodo {
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 28px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.addTodo:active {
+    opacity: 0.7;
+}
+
+/* Modal */
+.modal_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+.modal_wrapper.show {
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.title {
+    text-align: center;
+    color: black;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.form-item {
+    margin: 20px 0px;
+}
+.label_modal {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+.input_modal {
+    width: 100%;
+    border: 2px solid black;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+}
+
+.group-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.btn_success {
+    background-color: green;
+}
+
+.btn_dangerous {
+    background-color: red;
+}
