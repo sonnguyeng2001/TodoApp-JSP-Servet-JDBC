@@ -1,0 +1,155 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 22, 2023, 9:35:19 PM
+    Author     : FPTshop
+*/
+
+/* Toast message UI*/
+
+#toast_wrap {
+    position: fixed;
+    right: 32px;
+    top: 0;
+    z-index:999;
+}
+
+.toast {
+    margin-top: 32px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid transparent;
+    overflow: hidden;
+    animation: toast_animation_show 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.35) forwards;
+}
+
+.toast.remove {
+    animation: toast_animation_remove 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.35) forwards;
+}
+
+@keyframes toast_animation_show {
+    0% {
+        transform: translateX(calc(100% + 30px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toast_animation_remove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(100% + 30px));
+    }
+}
+
+
+
+.toast .toast-content {
+    display: flex;
+    align-items: center;
+    min-width:350px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.toast.success{
+    border-color: #4bb543
+}
+.toast.warning{
+    border-color: #FFCC00;
+}
+.toast.error{
+    border-color: #ff3333;
+}
+.toast.success .toast-content i,
+.toast.success .progress:before{
+    background-color: #4bb543;
+}
+.toast.warning .toast-content i,
+.toast.warning .progress:before{
+    background-color: #FFCC00;
+}
+.toast.error .toast-content i,
+.toast.error .progress:before{
+    background-color: #ff3333;
+}
+
+
+.toast-content .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    flex:1;
+}
+.message .text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+}
+
+.message .text.text-1 {
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover {
+    opacity: 1;
+}
+
+.toast .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.toast .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.progress.active:before {
+    animation: progress 1.5s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}

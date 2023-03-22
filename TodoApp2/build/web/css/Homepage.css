@@ -1,0 +1,419 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 21, 2023, 9:35:37 PM
+    Author     : FPTshop
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 166, 0, 0.714);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+.wrapper {
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.app {
+    width: 900px;
+    min-height: 700px;
+}
+.infoUserWrapper{
+    position: fixed;
+    z-index: 2;
+    top:11px;
+    right:5%;
+}
+.infoUserWrapper:hover .sign-out{
+    display: block;
+}
+.infoUser{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding:4px 20px;
+}
+.infoUser img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.infoUser p{
+    font-size: 16px;
+    color:white;
+}
+.infoUser:hover p,img,
+.infoUser:hover{
+    text-decoration: underline; 
+    cursor: pointer;
+}
+.sign-out{
+    position: absolute;
+    top: 59px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background: white;
+    width:100%;
+    display: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+    border:none;
+    outline: none;
+}
+
+.sign-out:before{
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom:10px solid white; 
+    position: absolute;
+    top:-9px;
+    right:77px;
+}
+.sign-out:hover{
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+        );
+    color:white;
+    cursor: pointer;
+}
+.heading {
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+
+.searchTodo_filterTodo {
+    display: flex;
+    margin: 50px 0px 30px 0px;
+}
+.searchTodo {
+    flex: 3;
+    width: 100%;
+}
+input.search_todo {
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.btn {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+.btn:active {
+    opacity: 0.7;
+}
+
+.filterTodo {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+.filterTodo div {
+    position: relative;
+    display: inline-block;
+}
+select.statusTodo {
+    margin: 0px 16px 0px 20px;
+    width: 180px;
+    outline: none;
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.arrow-to-bottom {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.Todos {
+}
+.list_todo {
+    list-style-type: none;
+    max-height: 420px;
+    overflow-y: auto;
+}
+.item_todo {
+    height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.item_todo p {
+    font-size: 16px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 118, 20, 1) 0%,
+        rgba(255, 84, 17, 1) 100%
+        );
+    padding: 0px 0px 0px 18px;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color:white;
+}
+.item_todo:nth-child(4n + 1) p {
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+        );
+}
+
+.item_todo:nth-child(4n + 2) p{
+    background: linear-gradient(
+        90deg,
+        rgba(255, 12, 241, 1) 0%,
+        rgba(250, 0, 135, 1) 100%
+        );
+}
+
+.item_todo:nth-child(4n + 3) p{
+    background: linear-gradient(
+        90deg,
+        rgba(20, 159, 255, 1) 0%,
+        rgba(17, 122, 255, 1) 100%
+        );
+}
+.item_todo p:hover {
+    background-color: #007fff;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.icon-wrapper {
+    padding: 0px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 4px;
+}
+
+.icon-wrapper:active {
+    opacity: 0.7;
+}
+.icon-wrapper.icon-check {
+    background-color: green;
+    margin-right: 4px;
+}
+
+.icon-wrapper.icon-trash {
+    background-color: red;
+}
+
+.addTodo_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.addTodo {
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 28px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.addTodo:active {
+    opacity: 0.7;
+}
+
+/* Modal */
+.modal_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+.modal_wrapper.show {
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+
+.titleModal {
+    text-align: center;
+    color: black;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: none;
+}
+.modal.modal-add .title-add{
+    display: block;
+}
+.modal.modal-details .title-details{
+    display: block;
+}
+
+.form-item {
+    margin: 20px 0px 4px 0px;
+}
+.label_modal {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+.input_modal {
+    width: 100%;
+    border: 2px solid black;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+}
+
+.group-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    gap: 40px;
+}
+
+.btn_success {
+    background-color: green;
+}
+
+.btn_dangerous {
+    background-color: red;
+}
+.btn_info {
+    background-color: #007fff;
+
+}
+.btn_searchTodo{
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+        );
+    padding:14px 30px;
+}
+.modal.modal-add .btn_success,.btn_dangerous{
+    display: block;
+}
+.modal.modal-details .btn_info,.btn_dangerous{
+    display: block;
+}
+
+.dateWrapper{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal.modal-details .dateWrapper{
+    display: flex;
+}
+
+.dateItem{
+    font-size: 14px;
+    color:gray;
+    font-style: italic;
+}
+

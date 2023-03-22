@@ -9,3 +9,5 @@ btnOpenModal.addEventListener("click", () => {
 btnCloseModal.addEventListener("click", () => {
 	modalWrapper.classList.remove("show");
 });
+
+ 
