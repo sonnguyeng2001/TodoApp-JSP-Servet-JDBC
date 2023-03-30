@@ -27,15 +27,15 @@
                 <input style="display: none" id="ID_USER" value="<%= session.getAttribute("idUser")%>"/>
                 <div class="searchTodo_filterTodo">
                     <div class="searchTodo">
-                        <input type="text" name="search_todo" class="search_todo" placeholder="Search your todo..." />
-                        <button style="display: inline-block" class="btn btn_searchTodo">Tìm kiếm</button>
+                        <input type="text" name="search_todo" class="search_todo" placeholder="Find your todo..." />
+                        <button style="display: inline-block" class="btn btn_searchTodo">Search</button>
                     </div>
                     <div class="filterTodo">
                         <div>
                             <select class="statusTodo">
-                                <option value="all">Tất cả</option>
-                                <option value="true">Đã hoàn thành</option>
-                                <option value="false">Chưa hoàn thành</option>
+                                <option value="">All</option>
+                                <option value="1">Complete</option>
+                                <option value="0">Incomplete</option>
                             </select>
                             <i class="fa-solid fa-arrow-down arrow-to-bottom"></i>
                         </div>
@@ -43,6 +43,9 @@
                 </div>
                 <div class="Todos">
                     <ul class="list_todo"></ul>
+                    <div class="imgEmptyList">
+                        <img src="img/emptyList.png" alt=""/>
+                    </div>
                     <div class="addTodo_wrapper">
                         <button id="btn-openModal" class="btn addTodo" type="button">
                             <i class="fa-solid fa-plus"></i>

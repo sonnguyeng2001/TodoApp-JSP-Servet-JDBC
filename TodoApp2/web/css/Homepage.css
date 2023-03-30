@@ -417,3 +417,18 @@ select.statusTodo {
     font-style: italic;
 }
 
+.imgEmptyList{
+    width:100%;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+       
+}
+.imgEmptyList img{
+    width:565px;
+    height:360px;
+    object-fit: cover;
+    border-radius: 20px;
+}

@@ -50,6 +50,31 @@ public class TodoDAO {
         return todos;
     }
 
+    public List<Todo> getTodosByStatus(String id_User, String status) {
+        List<Todo> todos = new ArrayList<>();
+        String query = "select * from tbl_TODO where id_USER = ? and status_TODO = ? order by createAt desc";
+
+        try {
+            con = new Connect().getConnection();
+            ps = con.prepareStatement(query);
+            ps.setString(1, id_User);
+            ps.setString(2, status);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                todos.add(new Todo(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getInt(5),
+                        rs.getTimestamp(6).toLocalDateTime(),
+                        rs.getTimestamp(7).toLocalDateTime()));
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+
+        }
+        return todos;
+    }
+
     public Todo getDetailsTodo(String idTodo) {
         String query = "select * from tbl_TODO where id_TODO = ?";
         try {
@@ -155,8 +180,7 @@ public class TodoDAO {
 
     public static void main(String[] args) {
         TodoDAO dao = new TodoDAO();
-        LocalDateTime localDate = LocalDateTime.now();
-        System.out.println(dao.updateTodo("titleUpdate", "noteUpdate", localDate, "5188A3EA"));
+        System.out.println(dao.getTodosByStatus("22EFAF8B", "1"));
 
     }
 }

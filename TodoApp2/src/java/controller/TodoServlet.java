@@ -47,6 +47,9 @@ public class TodoServlet extends HttpServlet {
             case "/GetTodoServlet":
                 getTodosAction(request, response);
                 break;
+            case "/GetTodoByStatusServlet":
+                getTodosByStatusAction(request, response);
+                break;
             case "/AddTodoServlet":
                 addTodoAction(request, response);
                 break;
@@ -242,6 +245,23 @@ public class TodoServlet extends HttpServlet {
             }
             out.print(obj);
         }
+    }
+
+    private void getTodosByStatusAction(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PrintWriter out = response.getWriter();
+        String idUser = request.getParameter("idUser");
+        String statusTodo = request.getParameter("statusTodo");
+
+        TodoDAO todoDao = new TodoDAO();
+        List<Todo> todos = todoDao.getTodosByStatus(idUser, statusTodo);
+        JSONObject obj = new JSONObject();
+        try {
+            obj.put("status", true);
+            obj.put("data", todos);
+        } catch (JSONException ex) {
+            Logger.getLogger(TodoServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        out.print(obj);
     }
 
 }

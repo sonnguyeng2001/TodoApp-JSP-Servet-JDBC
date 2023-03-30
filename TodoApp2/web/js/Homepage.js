@@ -411,4 +411,41 @@ btnSaveUser.click(() => {
     }
 
 });
+
+// HANLDE CHANGE SELECT
+$('.statusTodo').on('change', function () {
+    const idUser = $("#ID_USER").val();
+    const statusTodo = this.value;
+    $.ajax({
+        url: 'todo/GetTodoByStatusServlet',
+        data: {
+            idUser: idUser,
+            statusTodo: statusTodo
+        },
+        dataType: 'json',
+        type: 'POST',
+        success: function (response) {
+            if (response.status)
+            {
+                if (response.data.length > 0)
+                {
+                    renderTodo(response.data);
+                    $(".imgEmptyList").css("display", "none");
+
+                } else {
+                    $(".imgEmptyList").css("display", "flex");
+                    $(".list_todo").html("");
+                }
+
+
+            } else {
+                console.log("Error !!!");
+
+            }
+        },
+        error: function (res) {
+            console.log(res.responseText);
+        }
+    });
+});
  
