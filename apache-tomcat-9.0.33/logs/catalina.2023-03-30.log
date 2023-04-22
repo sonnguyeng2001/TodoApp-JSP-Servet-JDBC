@@ -112,3 +112,145 @@
 30-Mar-2023 10:37:02.550 SEVERE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [TodoApp2] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@19835e64]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [04f361b0-6aa0-4047-b14d-a9e31ce78eb8-1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
 30-Mar-2023 10:37:02.566 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8082"]
 30-Mar-2023 10:37:02.571 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8082"]
+30-Mar-2023 10:39:34.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.33
+30-Mar-2023 10:39:34.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 11 2020 09:31:38 UTC
+30-Mar-2023 10:39:34.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.33.0
+30-Mar-2023 10:39:34.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+30-Mar-2023 10:39:34.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+30-Mar-2023 10:39:34.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+30-Mar-2023 10:39:34.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_281\jre
+30-Mar-2023 10:39:34.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_281-b09
+30-Mar-2023 10:39:34.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+30-Mar-2023 10:39:34.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         G:\Java\apache-tomcat-9.0.33
+30-Mar-2023 10:39:34.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         G:\Java\apache-tomcat-9.0.33
+30-Mar-2023 10:39:34.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=G:\Java\apache-tomcat-9.0.33\conf\logging.properties
+30-Mar-2023 10:39:34.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+30-Mar-2023 10:39:34.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Desktop-Aspire
+30-Mar-2023 10:39:34.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+30-Mar-2023 10:39:34.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+30-Mar-2023 10:39:34.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+30-Mar-2023 10:39:34.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=G:\Java\apache-tomcat-9.0.33
+30-Mar-2023 10:39:34.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=G:\Java\apache-tomcat-9.0.33
+30-Mar-2023 10:39:34.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=G:\Java\apache-tomcat-9.0.33\temp
+30-Mar-2023 10:39:34.772 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+30-Mar-2023 10:39:34.772 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+30-Mar-2023 10:39:34.772 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+30-Mar-2023 10:39:34.792 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+30-Mar-2023 10:39:35.285 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8082"]
+30-Mar-2023 10:39:35.716 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1,254] milliseconds
+30-Mar-2023 10:39:35.756 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+30-Mar-2023 10:39:35.756 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.33]
+30-Mar-2023 10:39:35.787 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml]
+30-Mar-2023 10:39:35.811 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/TodoApp1] in deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml] has been ignored
+30-Mar-2023 10:39:35.847 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@569cfc36]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4805)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4940)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [G:\Java\TodoApp1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+30-Mar-2023 10:39:35.859 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp1.xml] has finished in [73] ms
+30-Mar-2023 10:39:35.861 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml]
+30-Mar-2023 10:39:35.865 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/TodoApp2] in deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml] has been ignored
+30-Mar-2023 10:39:36.909 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:39:37.024 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml] has finished in [1,163] ms
+30-Mar-2023 10:39:37.025 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\docs]
+30-Mar-2023 10:39:37.078 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\docs] has finished in [52] ms
+30-Mar-2023 10:39:37.078 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\examples]
+30-Mar-2023 10:39:37.441 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\examples] has finished in [362] ms
+30-Mar-2023 10:39:37.441 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\host-manager]
+30-Mar-2023 10:39:37.510 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\host-manager] has finished in [69] ms
+30-Mar-2023 10:39:37.511 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\manager]
+30-Mar-2023 10:39:37.581 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\manager] has finished in [70] ms
+30-Mar-2023 10:39:37.582 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [G:\Java\apache-tomcat-9.0.33\webapps\ROOT]
+30-Mar-2023 10:39:37.636 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [G:\Java\apache-tomcat-9.0.33\webapps\ROOT] has finished in [54] ms
+30-Mar-2023 10:39:37.642 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8082"]
+30-Mar-2023 10:39:37.655 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1,939] milliseconds
+30-Mar-2023 10:39:51.362 INFO [http-nio-8082-exec-8] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/TodoApp2]
+30-Mar-2023 10:39:51.378 INFO [http-nio-8082-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml]
+30-Mar-2023 10:39:51.380 WARNING [http-nio-8082-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/TodoApp2] in deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml] has been ignored
+30-Mar-2023 10:39:51.758 INFO [http-nio-8082-exec-4] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:39:51.795 INFO [http-nio-8082-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml] has finished in [416] ms
+30-Mar-2023 10:53:29.180 INFO [http-nio-8082-exec-11] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:53:29.189 WARNING [http-nio-8082-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [TodoApp2] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+30-Mar-2023 10:53:29.190 SEVERE [http-nio-8082-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [TodoApp2] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@14cf5cc8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [91c929b5-4462-42e6-8cd0-a782f4edd4b9-1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+30-Mar-2023 10:53:29.190 SEVERE [http-nio-8082-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [TodoApp2] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@14cf5cc8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [1a01e0c3-d1b9-48f8-b501-71ee99a4bb6f-1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+30-Mar-2023 10:53:29.191 SEVERE [http-nio-8082-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [TodoApp2] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@14cf5cc8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [32b56c04-fd97-4390-8434-286d456e5b17-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+30-Mar-2023 10:53:29.192 SEVERE [http-nio-8082-exec-11] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [TodoApp2] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@14cf5cc8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [052915b8-d284-41bf-9b2f-191a902a30b4-3]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+30-Mar-2023 10:53:29.553 INFO [http-nio-8082-exec-11] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:53:29.566 INFO [http-nio-8082-exec-11] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 10:54:32.586 INFO [http-nio-8082-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:54:32.951 INFO [http-nio-8082-exec-14] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:54:32.971 INFO [http-nio-8082-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 10:55:32.282 INFO [http-nio-8082-exec-17] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:55:32.627 INFO [http-nio-8082-exec-17] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:55:32.760 INFO [http-nio-8082-exec-17] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 10:55:35.256 INFO [http-nio-8082-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:55:35.593 INFO [http-nio-8082-exec-20] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:55:35.601 INFO [http-nio-8082-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 10:55:38.819 INFO [http-nio-8082-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:55:39.658 INFO [http-nio-8082-exec-26] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:55:39.695 INFO [http-nio-8082-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 10:55:49.526 INFO [http-nio-8082-exec-23] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:55:49.833 INFO [http-nio-8082-exec-23] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:55:49.855 INFO [http-nio-8082-exec-23] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 10:56:44.521 INFO [http-nio-8082-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 10:56:44.819 INFO [http-nio-8082-exec-21] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 10:56:44.843 INFO [http-nio-8082-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 11:02:40.957 INFO [http-nio-8082-exec-34] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] has started
+30-Mar-2023 11:02:41.238 INFO [http-nio-8082-exec-34] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 11:02:41.245 INFO [http-nio-8082-exec-34] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/TodoApp2] is completed
+30-Mar-2023 11:03:12.981 INFO [http-nio-8082-exec-33] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/TodoApp2]
+30-Mar-2023 11:03:14.975 INFO [http-nio-8082-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml]
+30-Mar-2023 11:03:14.976 WARNING [http-nio-8082-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/TodoApp2] in deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml] has been ignored
+30-Mar-2023 11:03:15.279 INFO [http-nio-8082-exec-21] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Mar-2023 11:03:15.292 INFO [http-nio-8082-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [G:\Java\apache-tomcat-9.0.33\conf\Catalina\localhost\TodoApp2.xml] has finished in [316] ms
+30-Mar-2023 11:03:15.302 INFO [http-nio-8082-exec-21] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/TodoApp2]] after start() had already been called. The second call will be ignored.
+30-Mar-2023 11:30:30.593 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+30-Mar-2023 11:30:30.594 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8082"]

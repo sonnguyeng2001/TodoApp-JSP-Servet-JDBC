@@ -15,6 +15,7 @@
     <body>
         <h2 class="heading">TODO APP</h2>
         <div class="container" id="container">
+            <%--form Register --%>
             <div class="form-container sign-up-container">
                 <form id="formSignUp">
                     <h1>Create Account</h1>
@@ -24,11 +25,18 @@
                     <input name="confirmPassword_SignUp" type="password" placeholder="Confirm Password" />
                     <br />
                     <p class="errMessage errSignUp"></p>
+                     <div class="lds-ellipsis" id="loadingSignUp">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                     <br />
-
                     <button id="btn-submit-signUp" type="button">Sign Up</button>
                 </form>
             </div>
+
+            <%--form Login --%>
             <div class="form-container sign-in-container">
                 <form id="formSignIn" action="" method="POST">
                     <h1>Sign in</h1>
@@ -37,6 +45,12 @@
                     <input name="password_SignIn"  type="password" placeholder="Password" />
                     <br />
                     <p class="errMessage errSignIn">${errMessage}</p>
+                    <div class="lds-ellipsis" id="loadingSignIn">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                     <br />
                     <button id="btn-submit-signIn" type="button">Sign In</button>
                 </form>

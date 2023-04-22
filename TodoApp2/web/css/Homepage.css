@@ -209,6 +209,7 @@ select.statusTodo {
     display: flex;
 }
 
+
 .item_todo p {
     font-size: 16px;
     background: linear-gradient(
@@ -225,6 +226,18 @@ select.statusTodo {
     border-radius: 4px;
     transition: all 0.2s ease;
     color:white;
+    position: relative;
+    overflow: hidden;
+}
+.item_todo p .item_success{
+    position: absolute;
+    right:0;
+    background-color: #4bb543;
+    color: white;
+    padding: 4px 20px;
+    font-size: 12px;
+    transform: rotate(-45deg);
+    text-align: center;
 }
 .item_todo:nth-child(4n + 1) p {
     background: linear-gradient(
@@ -424,7 +437,7 @@ select.statusTodo {
     justify-content: center;
     align-items: center;
     margin-bottom: 18px;
-       
+
 }
 .imgEmptyList img{
     width:565px;

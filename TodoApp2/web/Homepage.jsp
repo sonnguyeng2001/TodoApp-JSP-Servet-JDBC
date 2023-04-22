@@ -33,9 +33,9 @@
                     <div class="filterTodo">
                         <div>
                             <select class="statusTodo">
-                                <option value="">All</option>
+                                <option value="0">All</option>
                                 <option value="1">Complete</option>
-                                <option value="0">Incomplete</option>
+                                <option value="-1">Incomplete</option>
                             </select>
                             <i class="fa-solid fa-arrow-down arrow-to-bottom"></i>
                         </div>

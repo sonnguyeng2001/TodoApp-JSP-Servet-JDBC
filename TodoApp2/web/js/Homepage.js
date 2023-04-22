@@ -57,18 +57,21 @@ function renderTodo(todos)
 {
     var htmlTemplate = "";
     todos.forEach(function (todo) {
-        htmlTemplate += getTemplateTodo(todo.id_TODO, todo.title);
+        htmlTemplate += getTemplateTodo(todo.id_TODO, todo.title, todo.status_TODO);
     });
     $(".list_todo").html(htmlTemplate);
 }
 
 
 // TEMPLATE ITEM TODO
-function getTemplateTodo(idTodo, titleTodo)
+function getTemplateTodo(idTodo, titleTodo, statusTodo)
 {
     return  `
             <li class="item_todo" itemid=${idTodo}>
-                <p onclick="handleDetailsTodo(this)">${titleTodo}</p>
+                <p onclick="handleDetailsTodo(this)">
+                    <span>${titleTodo}</span>
+                    ${statusTodo === 1 ? `<span class="item_success">Complete</span>` : ''}
+                </p>
                 <div class="icons">
                     <div class="icon-wrapper icon-check" onClick="handleCompleteTodo(this)">
                         <i class="fa-sharp fa-regular fa-circle-check"></i>
@@ -300,11 +303,13 @@ $("input[name=search_todo]").on("input", function () {
         dataType: 'json',
         type: 'POST',
         success: function (response) {
-            if (response.data)
+            if (response.data.length > 0)
             {
+                $(".imgEmptyList").css("display", "none");
                 renderTodo(response.data);
             } else {
-                create_Toast("Remove Failed", "error");
+                $(".imgEmptyList").css("display", "flex");
+                $(".list_todo").html("");
             }
         },
         error: function (res) {
@@ -318,8 +323,32 @@ $("input[name=search_todo]").on("input", function () {
 function handleCompleteTodo(item)
 {
     // tag <li> contains id
-    const id = item.parentNode.parentNode.getAttribute("itemid");
-    console.log(id);
+    const idTodo = item.parentNode.parentNode.getAttribute("itemid");
+    const idUser = $("#ID_USER").val();
+
+    $.ajax({
+        url: 'todo/SetCompleteTodo',
+        data: {
+            idTodo: idTodo,
+            idUser: idUser
+        },
+        dataType: 'json',
+        type: 'POST',
+        success: function (response) {
+            if (response.status)
+            {
+                $(`li[itemid="${idTodo}"] p`).append(`<span class="item_success">Complete</span>`);
+                create_Toast("Update successfully", "success");
+
+            } else {
+                create_Toast("Update Failed", "error");
+            }
+        },
+        error: function (res) {
+            create_Toast("Error", "error");
+            console.log(res.responseText);
+        }
+    });
 }
 
 // HANDLE SIGN OUT

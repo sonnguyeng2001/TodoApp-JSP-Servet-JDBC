@@ -65,6 +65,9 @@ public class TodoServlet extends HttpServlet {
             case "/SearchTodoServlet":
                 searchTodoAction(request, response);
                 break;
+            case "/SetCompleteTodo":
+                setCompleteTodoAction(request, response);
+                break;
 
         }
     }
@@ -258,6 +261,20 @@ public class TodoServlet extends HttpServlet {
         try {
             obj.put("status", true);
             obj.put("data", todos);
+        } catch (JSONException ex) {
+            Logger.getLogger(TodoServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        out.print(obj);
+    }
+
+    private void setCompleteTodoAction(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PrintWriter out = response.getWriter();
+        String idUser = request.getParameter("idUser");
+        String idTodo = request.getParameter("idTodo");
+        TodoDAO todoDao = new TodoDAO();
+        JSONObject obj = new JSONObject();
+        try {
+            obj.put("status", todoDao.setCompleteTodo(idUser, idTodo));
         } catch (JSONException ex) {
             Logger.getLogger(TodoServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -30,61 +30,25 @@ signInButton.addEventListener('click', () => {
 // Handle SignIn
 const btn_SignIn = $('#btn-submit-signIn');
 btn_SignIn.click(function () {
-    var username_SignIn = $("input[name=username_SignIn]").val();
-    var password_SignIn = $("input[name=password_SignIn]").val();
-    var data = $("#formSignIn").serialize();
-    if (username_SignIn.trim() !== "" && password_SignIn.trim() !== "")
-    {
-        $.ajax({
-            url: 'user/LoginServlet',
-            data: data,
-            dataType: 'json',
-            type: 'POST',
-            success: function (data) {
-                if (data.status)
-                {
-                    window.location.href = "Homepage.jsp";
-                } else {
-                    errMessage_SignIn.text("Tên đăng nhập hoặc mật khẩu không chính xác");
-                }
-            },
-            error: function (res) {
-                console.log(res.responseText);
-            }
-        });
-    } else {
-        errMessage_SignIn.html("Vui lòng điền đầy đủ thông tin");
-
-    }
-});
-
-// Handle SignUp
-const btn_SignUp = $('#btn-submit-signUp');
-btn_SignUp.click(function () {
-    var username_SignUp = $("input[name=username_SignUp]").val();
-    var password_SignUp = $("input[name=password_SignUp]").val();
-    var confirmPassword_SignUp = $("input[name=confirmPassword_SignUp]").val();
-
-    var data = $("#formSignUp").serialize();
-    if (username_SignUp.trim() !== "" && password_SignUp.trim() !== "" && confirmPassword_SignUp.trim() !== "")
-    {
-        if (password_SignUp.toString().toLowerCase() === confirmPassword_SignUp.toString().toLowerCase())
+    $("#loadingSignIn").css("display", "inline-block");
+    errMessage_SignIn.text("");
+    setTimeout(function () {
+        var username_SignIn = $("input[name=username_SignIn]").val();
+        var password_SignIn = $("input[name=password_SignIn]").val();
+        var data = $("#formSignIn").serialize();
+        if (username_SignIn.trim() !== "" && password_SignIn.trim() !== "")
         {
             $.ajax({
-                url: 'user/RegisterServlet',
+                url: 'user/LoginServlet',
                 data: data,
                 dataType: 'json',
                 type: 'POST',
                 success: function (data) {
                     if (data.status)
                     {
-                        errMessage_SignUp.addClass("text-success");
-                        errMessage_SignUp.text("Đăng ký thành công");
-
+                        window.location.href = "Homepage.jsp";
                     } else {
-                        errMessage_SignUp.text("Tên đăng nhập đã tồn tài");
-                        errMessage_SignUp.removeClass("text-success");
-
+                        errMessage_SignIn.text("Tên đăng nhập hoặc mật khẩu không chính xác");
                     }
                 },
                 error: function (res) {
@@ -92,11 +56,64 @@ btn_SignUp.click(function () {
                 }
             });
         } else {
-            errMessage_SignUp.text("2 mật khẩu phải giống nhau !!!");
+            errMessage_SignIn.html("Vui lòng điền đầy đủ thông tin");
+
         }
+        $("#loadingSignIn").css("display", "none");
+    }, 700);
 
-    } else {
-        errMessage_SignUp.text("Vui lòng điền đầy đủ thông tin !!!");
+});
 
-    }
+// Handle SignUp
+const btn_SignUp = $('#btn-submit-signUp');
+btn_SignUp.click(function () {
+    $("#loadingSignUp").css("display", "inline-block");
+    errMessage_SignUp.text("");
+    setTimeout(function () {
+        var username_SignUp = $("input[name=username_SignUp]").val();
+        var password_SignUp = $("input[name=password_SignUp]").val();
+        var confirmPassword_SignUp = $("input[name=confirmPassword_SignUp]").val();
+
+        var data = $("#formSignUp").serialize();
+        if (username_SignUp.trim() !== "" && password_SignUp.trim() !== "" && confirmPassword_SignUp.trim() !== "")
+        {
+            if (password_SignUp.toString().toLowerCase() === confirmPassword_SignUp.toString().toLowerCase())
+            {
+                $.ajax({
+                    url: 'user/RegisterServlet',
+                    data: data,
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+                        if (data.status)
+                        {
+                            errMessage_SignUp.addClass("text-success");
+                            errMessage_SignUp.text("Đăng ký thành công");
+
+
+                        } else {
+                            errMessage_SignUp.text("Tên đăng nhập đã tồn tài");
+                            errMessage_SignUp.removeClass("text-success");
+
+                        }
+
+                    },
+                    error: function (res) {
+                        console.log(res.responseText);
+                        errMessage_SignUp.text("Đăng ký thất bại.");
+                        errMessage_SignUp.removeClass("text-success");
+                    }
+                });
+            } else {
+                errMessage_SignUp.text("2 mật khẩu phải giống nhau !!!");
+
+            }
+
+        } else {
+            errMessage_SignUp.text("Vui lòng điền đầy đủ thông tin !!!");
+
+        }
+        $("#loadingSignUp").css("display", "none");
+    }, 700);
+
 });
